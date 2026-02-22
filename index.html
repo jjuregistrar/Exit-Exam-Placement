@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NGAT Placement Announcement</title>
+    <title>Exit Exam Placement Announcement</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -631,11 +631,11 @@
             <img src="https://i.ibb.co/0j2mgMBp/JJU-LOGO.png" alt="Jigjiga University Logo" class="logo" />
             <h1>Jigjiga University</h1>
             <h2>Registrar and Alumni Directorate</h2>
-            <div class="pink">Tikimt 3, 2018 E.C.<br />NGAT Placement Announcement</div>
+            <div class="pink">Exit Exam Placement</div>
 
-            <div class="instructions">Enter your username to find your exam placement details</div>
+            <div class="instructions">Enter your username to find your exam placement details.</div>
             
-            <input type="text" id="usernameInput" placeholder="Enter username (e.g., NGAT00000018)" />
+            <input type="text" id="usernameInput" placeholder="Enter username (e.g., EUEE00000018)" />
             <button id="searchButton" onclick="searchStudent()">Search</button>
             
             <div class="loading" id="loadingIndicator">Searching for student information...</div>
@@ -643,7 +643,7 @@
             <div id="result"></div>
             
             <div class="footer">
-                For assistance, contact the Registrar and Alumni Directorate
+                For assistance, contact the Registrar and Alumni Directorate.
             </div>
 
             <!-- Social Media Icons Section -->
@@ -736,12 +736,12 @@
                             studentFound = {
                                 username: fields[0] ? fields[0].trim() : 'Unknown',
                                 name: fields[1] ? fields[1].trim() : 'Unknown',
-                                gender: fields[2] ? fields[2].trim() : 'Not specified',
+                                password: fields[2] ? fields[2].trim() : 'Not specified',
                                 examDate: fields[3] ? fields[3].trim() : 'Not specified',
-                                building: fields[4] ? fields[4].trim() : 'Not specified',
-                                room: fields[5] ? fields[5].trim() : 'Not specified',
-                                time: fields[6] ? fields[6].trim() : 'Not specified',
-                                session: fields[7] ? fields[7].trim() : 'Not specified'
+                                examTopic: fields[4] ? fields[4].trim() : 'Not specified',
+                                building: fields[5] ? fields[4].trim() : 'Not specified',
+                                room: fields[6] ? fields[5].trim() : 'Not specified',
+                                time: fields[7] ? fields[6].trim() : 'Not specified',
                             };
                             break; // Stop searching once we found the student
                         }
@@ -753,9 +753,9 @@
                     resultDiv.innerHTML = `
                         <div class="result-item"><span class="field-label">Examinee Name:</span> ${studentFound.name}</div>
                         <div class="result-item"><span class="field-label">Username:</span> ${studentFound.username}</div>
-                        <div class="result-item"><span class="field-label">Gender:</span> ${studentFound.gender}</div>
+                        <div class="result-item"><span class="field-label">Password:</span> ${studentFound.password}</div>
                         <div class="result-item"><span class="field-label">Exam Date:</span> ${studentFound.examDate}</div>
-                        <div class="result-item"><span class="field-label">Session:</span> ${studentFound.session}</div>
+                        <div class="result-item"><span class="field-label">Department (Exam Topic):</span> ${studentFound.examTopic}</div>
                         <div class="result-item"><span class="field-label">Exam Building:</span> ${studentFound.building}</div>
                         <div class="result-item"><span class="field-label">Exam Room:</span> ${studentFound.room}</div>
                         <div class="result-item red"><span class="field-label">Exam Time:</span> ${studentFound.time}</div>
@@ -774,9 +774,9 @@
                     resultDiv.innerHTML = `
                         <div class="result-item"><span class="field-label">Examinee Name:</span> ${sampleStudent.name}</div>
                         <div class="result-item"><span class="field-label">Username:</span> ${sampleStudent.username}</div>
-                        <div class="result-item"><span class="field-label">Gender:</span> ${sampleStudent.gender}</div>
+                        <div class="result-item"><span class="field-label">Password:</span> ${sampleStudent.password}</div>
                         <div class="result-item"><span class="field-label">Exam Date:</span> ${sampleStudent.examDate}</div>
-                        <div class="result-item"><span class="field-label">Session:</span> ${sampleStudent.session}</div>
+                        <div class="result-item"><span class="field-label">Department (Exam Topic):</span> ${sampleStudent.examTopic}</div>
                         <div class="result-item"><span class="field-label">Exam Building:</span> ${sampleStudent.building}</div>
                         <div class="result-item"><span class="field-label">Exam Room:</span> ${sampleStudent.room}</div>
                         <div class="result-item red"><span class="field-label">Exam Time:</span> ${sampleStudent.time}</div>
@@ -797,34 +797,34 @@
         function getSampleStudent(username) {
             const sampleData = {
                 "NGAT00000018": {
-                    username: "NGAT00000018",
+                    username: "EUEE00000018",
                     name: "Ahmed Mohammed",
-                    gender: "Male",
+                    password: "AbcD",
                     examDate: "October 15, 2024",
                     building: "Science Building",
                     room: "Room 101",
                     time: "9:00 AM - 11:00 AM",
-                    session: "Morning"
+                    examTopic: "Mathematics"
                 },
                 "NGAT00000019": {
                     username: "NGAT00000019",
                     name: "Fatima Hassan",
-                    gender: "Female",
+                    password: "AbcD",
                     examDate: "October 15, 2024",
                     building: "Science Building",
-                    room: "Room 102",
+                    room: "Room 101",
                     time: "9:00 AM - 11:00 AM",
-                    session: "Morning"
+                    examTopic: "Physics"
                 },
                 "NGAT00000020": {
                     username: "NGAT00000020",
                     name: "Mohammed Ali",
-                    gender: "Male",
+                    password: "AbcD",
                     examDate: "October 15, 2024",
-                    building: "Main Building",
-                    room: "Room 201",
-                    time: "2:00 PM - 4:00 PM",
-                    session: "Afternoon"
+                    building: "Science Building",
+                    room: "Room 101",
+                    time: "9:00 AM - 11:00 AM",
+                    examTopic: "Chemistry"
                 }
             };
             
