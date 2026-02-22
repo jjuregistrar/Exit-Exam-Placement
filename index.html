@@ -736,7 +736,7 @@
                             studentFound = {
                                 username: fields[0] ? fields[0].trim() : 'Unknown',
                                 name: fields[1] ? fields[1].trim() : 'Unknown',
-                                password: fields[2] ? fields[2].trim() : 'Not specified',
+                                gender: fields[2] ? fields[2].trim() : 'Not specified',
                                 examDate: fields[3] ? fields[3].trim() : 'Not specified',
                                 examTopic: fields[4] ? fields[4].trim() : 'Not specified',
                                 building: fields[5] ? fields[5].trim() : 'Not specified',
@@ -753,7 +753,7 @@
                     resultDiv.innerHTML = `
                         <div class="result-item"><span class="field-label">Examinee Name:</span> ${studentFound.name}</div>
                         <div class="result-item"><span class="field-label">Username:</span> ${studentFound.username}</div>
-                        <div class="result-item"><span class="field-label">Password:</span> ${studentFound.password}</div>
+                        <div class="result-item"><span class="field-label">Gender:</span> ${studentFound.gender}</div>
                         <div class="result-item"><span class="field-label">Exam Date:</span> ${studentFound.examDate}</div>
                         <div class="result-item"><span class="field-label">Department (Exam Topic):</span> ${studentFound.examTopic}</div>
                         <div class="result-item"><span class="field-label">Exam Building:</span> ${studentFound.building}</div>
@@ -796,7 +796,7 @@
         // Fallback function with sample data
         function getSampleStudent(username) {
             const sampleData = {
-                "NGAT00000018": {
+                "EUEE00000018": {
                     username: "EUEE00000018",
                     name: "Ahmed Mohammed",
                     password: "AbcD",
@@ -806,8 +806,8 @@
                     time: "9:00 AM - 11:00 AM",
                     examTopic: "Mathematics"
                 },
-                "NGAT00000019": {
-                    username: "NGAT00000019",
+                "EUEE00000019": {
+                    username: "EUEE00000019",
                     name: "Fatima Hassan",
                     password: "AbcD",
                     examDate: "October 15, 2024",
@@ -816,8 +816,8 @@
                     time: "9:00 AM - 11:00 AM",
                     examTopic: "Physics"
                 },
-                "NGAT00000020": {
-                    username: "NGAT00000020",
+                "EUEE00000020": {
+                    username: "EUEE00000020",
                     name: "Mohammed Ali",
                     password: "AbcD",
                     examDate: "October 15, 2024",
